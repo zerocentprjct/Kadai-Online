@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="css/style1.css" />
+    <!-- If you have PDF generation, include html2pdf.js here -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="order-confirmation" id="orderReport">
+      <h1>Order Confirmation</h1>
+      <div id="orderDetails">
+        <!-- Order details will be injected here -->
+      </div>
+      <p class="download-message">
+        Your receipt will be automatically downloaded.
+      </p>
+    </div>
+    <script src="js/order.js"></script>
+  </body>
+</html>

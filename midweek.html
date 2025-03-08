@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Koleksi | Midweek</title>
+    <!-- My Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Box Icon -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- LEAFLET -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- Main Style -->
+    <link rel="stylesheet" href="css/style1.css" />
+    <!-- Transition Styles -->
+    <link rel="stylesheet" href="css/transition.css" />
+  </head>
+  <body class="page-midweek">
+    <a href="https://wa.me/6282171017861" target="_blank" class="whatsapp-btn"
+      ><i class="bx bxl-whatsapp"></i
+    ></a>
+    <!-- Fixed Navbar Start (outside sliding container) -->
+    <nav class="navkoleksi fixed-navbar">
+      <div class="navbar-nav">
+        <a href="collection.html" data-slide="right">BestDeal</a>
+        <a href="weekend.html" data-slide="right">Weekend</a>
+        <a href="#" class="active">Midweek</a>
+      </div>
+      <div class="navbar-extra">
+        <a href="index.html" id="home" data-slide="right">
+          <i data-feather="home"></i>
+        </a>
+        <a href="#" id="search-button">
+          <i data-feather="search"></i>
+        </a>
+        <!-- Cart Icon -->
+        <a id="shopping-cart">
+          <i data-feather="shopping-cart"></i>
+        </a>
+      </div>
+      <!-- Cart -->
+      <div class="cart">
+        <h2 class="cart-title">Your Cart</h2>
+        <!-- Content -->
+        <div class="cart-content"></div>
+        <!-- Total -->
+        <div class="total">
+          <div class="total-title">Total</div>
+          <div class="total-price">Rp.0</div>
+        </div>
+        <!-- Checkout Form -->
+        <form id="checkout-form">
+          <h3>Checkout Details</h3>
+          <div class="form-group">
+            <label for="name">Name <span class="required">*</span></label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone(WA) <span class="required">*</span></label>
+            <input type="text" id="email" name="phone" />
+          </div>
+          <div class="form-group">
+            <label for="address"
+              >Address manually <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="address"
+              name="address"
+              placeholder="Type your address"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="map-address">Click address from map</label>
+            <input
+              type="text"
+              id="map-address"
+              name="map-address"
+              placeholder="Click address on map"
+            />
+            <div id="map"></div>
+          </div>
+        </form>
+        <!-- Buy Action -->
+        <button type="button" class="btn-buy">Buy Now</button>
+        <!-- Close Cart -->
+        <i id="cart-close" data-feather="x-square"></i>
+      </div>
+      <!-- Search Form -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here" />
+        <label for="search-box"><i class="bx bx-search"></i></label>
+      </div>
+    </nav>
+    <!-- Fixed Navbar End -->
+
+    <!-- Animated Content Container (only this slides) -->
+    <div class="transition-container">
+      <!-- Shop Section -->
+      <section class="shop container">
+        <h2 class="shop-title">Lead The Way</h2>
+        <div class="shop-content">
+          <!-- 1st product -->
+          <div class="product-box">
+            <img src="img/midweek/product1.jpg" alt="" class="product-img" />
+            <h2 class="product-title">Satu</h2>
+            <span class="price">Rp.120k</span>
+            <i class="bx bx-info-square product-info"></i>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </div>
+          <!-- Modal detail info -->
+          <div class="modal" id="item-detail">
+            <div class="modal-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos eligendi nesciunt enim nemo fuga molestiae culpa.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2nd product -->
+          <div class="product-box">
+            <img src="img/midweek/product2.jpg" alt="" class="product-img" />
+            <h2 class="product-title">Dua</h2>
+            <span class="price">Rp.100k</span>
+            <i class="bx bx-info-square product-info"></i>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </div>
+          <!-- Modal detail info -->
+          <div class="modal" id="item-detail">
+            <div class="modal-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos eligendi nesciunt enim nemo fuga molestiae culpa.
+              </p>
+            </div>
+          </div>
+
+          <!-- 3rd product -->
+          <div class="product-box">
+            <img src="img/midweek/product3.jpg" alt="" class="product-img" />
+            <h2 class="product-title">Tiga</h2>
+            <span class="price">Rp.145k</span>
+            <i class="bx bx-info-square product-info"></i>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </div>
+          <!-- Modal detail info -->
+          <div class="modal" id="item-detail">
+            <div class="modal-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos eligendi nesciunt enim nemo fuga molestiae culpa.
+              </p>
+            </div>
+          </div>
+
+          <!-- 4th product -->
+          <div class="product-box">
+            <img src="img/midweek/product4.jpg" alt="" class="product-img" />
+            <h2 class="product-title">Empat</h2>
+            <span class="price">Rp.120k</span>
+            <i class="bx bx-info-square product-info"></i>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </div>
+          <!-- Modal detail info -->
+          <div class="modal" id="item-detail">
+            <div class="modal-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos eligendi nesciunt enim nemo fuga molestiae culpa.
+              </p>
+            </div>
+          </div>
+
+          <!-- 5th product -->
+          <div class="product-box">
+            <img src="img/midweek/product5.jpg" alt="" class="product-img" />
+            <h2 class="product-title">Lima</h2>
+            <span class="price">Rp.110k</span>
+            <i class="bx bx-info-square product-info"></i>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </div>
+          <!-- Modal detail info -->
+          <div class="modal" id="item-detail">
+            <div class="modal-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos eligendi nesciunt enim nemo fuga molestiae culpa.
+              </p>
+            </div>
+          </div>
+
+          <!-- 6th product -->
+          <div class="product-box">
+            <img src="img/midweek/product6.jpg" alt="" class="product-img" />
+            <h2 class="product-title">Enam</h2>
+            <span class="price">Rp.110k</span>
+            <i class="bx bx-info-square product-info"></i>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </div>
+          <!-- Modal detail info -->
+          <div class="modal" id="item-detail">
+            <div class="modal-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos eligendi nesciunt enim nemo fuga molestiae culpa.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Shop End -->
+
+      <!-- Optional Overlay -->
+      <div class="overlay"></div>
+    </div>
+    <!-- End of Animated Content Container -->
+    <!-- Leaflet JS -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+    <!-- Navbar small screens toggles -->
+    <script src="js/script.js"></script>
+    <!-- Transition Script -->
+    <script src="js/gmap.js" defer></script>
+    <script src="js/order.js" defer></script>
+  </body>
+</html>
